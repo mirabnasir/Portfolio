@@ -29,7 +29,7 @@ body {
 
 .list li {
     margin: 20px 0;
-    font-size: 16px;
+    font-size: 18px;
     color: #333;
 }
 
@@ -81,13 +81,13 @@ body {
 .service h2 {
     text-align: center;
     color: #1c2237;
-    font-size: 20px;
+    font-size: 24px;
     font-variant: small-caps;
     margin-bottom: 10px;
 }
 
 .service p {
-    font-size: 15px;
+    font-size: 18px;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -102,7 +102,7 @@ body {
 }
 
 .service li {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 5px;
     display: flex;
     align-items: center;
