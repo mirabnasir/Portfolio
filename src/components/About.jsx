@@ -1,183 +1,64 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Times New Roman', Times, serif;
-}
 
-.about {
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px;
-}
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaMobileAlt, FaServer, FaRocket, FaGithub,  } from 'react-icons/fa';
+import { SiReact,SiCplusplus ,SiCsharp ,SiNodedotjs , SiMongodb } from 'react-icons/si';
+function About(){
 
-.about h1 {
-    text-align: center;
-    padding: 20px 20px 0 20px;
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: #1c2237;
-}
+return(
+ <div className="about">
+    <h1>
+        Designing With Passion While Exploring The World
+    </h1>
+    <div className="list">
+        <ol>
+                <li>Development of through srs document for a semester project guaranteeing precise and defined software requirements thereby enhancing the efficiency of the development process</li>
+                <li>Developed a java based library management system incorporating advanced oop principles for streamlined operations</li>
+                <li>Completed C++ projects and implemented various data structures and algorithms for practical applications.Developed web projects using HTML</li>
+                <li>I've crafted  layouts and stylish designs, showcasing my proficiency in structuring content and applying CSS properties effectively. These projects have enhanced my skills in web development</li>
+        </ol>
+        <div className="about-buttons">
+        <a href="https://mirabnasir.github.io/cv/" target="-blank" rel="noopener noreferrer">
+        <button >View My CV</button></a>
+        </div>
+    </div>
+    <div className="service-container">
+  <div className="service">
+    <img></img>
+    <h2>Web Development & Front-End Development</h2>
+    <p>Crafting visually stunning and responsive web pages that engage users across all devices.</p>
+    <ul>
+      <li><FaHtml5 color="#E34F26" /> HTML5</li>
+      <li><FaCss3Alt color="#1572B6" /> CSS3</li>
+      <li><FaJsSquare color="#F7DF1E" /> JavaScript</li>
+      <li><FaMobileAlt color="#28A745" /> Responsive Design</li>
+    </ul>
+  </div>
 
-.list ol {
-    padding: 0 20px;
-    list-style-position: inside;
-}
+  <div className="service">
+    <img></img>
+    <h2>Programming Languages & Backend</h2>
+    <p>Working with versatile programming languages and backend technologies for efficient development.</p>
+    <ul>
+      <li><SiCplusplus color="#00599C" /> C++</li>
+      <li><SiCsharp color="#239120" /> C#</li>
+      <li><SiNodedotjs color="#83CD29" /> Node.js (Basic)</li>
+      <li><SiMongodb color="#47A248" /> MongoDB (Basic)</li>
+    </ul>
+  </div>
 
-.list li {
-    margin: 20px 0;
-    font-size: 18px;
-    color: #333;
-}
+  <div className="service">
+    <img></img>
+    <h2>Version Control & Deployment</h2>
+    <p>Ensuring smooth development processes with industry-standard tools.</p>
+    <ul>
+      <li><FaGithub color="#181717" /> Git & GitHub</li>
+      <li><SiReact color="#61DAFB" /> React</li>
+      <li><FaServer color="#6C757D" /> APIs Integration</li>
+      <li><FaRocket color="#FF4500" /> Performance Optimization</li>
+    </ul>
+  </div>
+</div>
 
-.about-buttons {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
+</div>);
 
-.about-buttons button {
-    background-color: #fff;
-    margin: 10px;
-    padding: 12px 20px;
-    border: 2px solid #1c2237;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #1c2237;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.about-buttons button:hover {
-    background-color: #1c2237;
-    color: #fff;
-}
-
-.service-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: 10px;
-    flex-direction: column;
-    align-items: center;
-}
-
-.service {
-    border: 1px solid #1c2237;
-    padding: 20px;
-    flex: 1;
-    min-width: 600px;
-    max-width: 520px;
-    text-align: left;
-    transition: border 0.3s ease;
-}
-
-.service h2 {
-    text-align: center;
-    color: #1c2237;
-    font-size: 24px;
-    font-variant: small-caps;
-    margin-bottom: 10px;
-}
-
-.service p {
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.service:hover {
-    border: 6px solid #1c2237;
-}
-
-.service ul {
-    padding-left: 0;
-    list-style: none;
-}
-
-.service li {
-    font-size: 16px;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.service li svg {
-    margin-right: 10px;
-}
-
-/* Responsive Design Fixes */
-@media (max-width: 915px) {
-    .service-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .about h1 {
-        font-size: 2.2rem;
-    }
-
-    .list li {
-        font-size: 1.2rem;
-    }
-
-    .about-buttons button {
-        font-size: 1rem;
-    }
-
-    .service h2 {
-        font-size: 1.4rem;
-    }
-
-    .service p {
-        font-size: 1.1rem;
-    }
-
-    .service-container {
-        gap: 15px;
-        flex-direction: column;
-    }
-
-    .service {
-        max-width: 450px;
-    }
-}
-
-@media (max-width: 480px) {
-    .about h1 {
-        font-size: 1.8rem;
-    }
-
-    .list li {
-        font-size: 16px;
-    }
-
-    .about-buttons button {
-        font-size: 1rem;
-        padding: 12px 18px;
-    }
-
-    .service h2 {
-        font-size: 1.2rem;
-    }
-
-    .service p {
-        font-size: 1rem;
-    }
-
-    .service-container {
-        gap: 10px;
-        flex-direction: column;
-    }
-
-    .service {
-        min-width: 300px;
-        max-width: 320px;
-    }
 }
