@@ -1,4 +1,5 @@
-
+import React from "react";
+import './About.css';
 
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaMobileAlt, FaServer, FaRocket, FaGithub,  } from 'react-icons/fa';
 import { SiReact,SiCplusplus ,SiCsharp ,SiNodedotjs , SiMongodb } from 'react-icons/si';
