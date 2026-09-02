@@ -1,183 +1,193 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Times New Roman', Times, serif;
-}
+/* =========================
+   ABOUT SECTION
+========================= */
 
 .about {
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 30px;
 }
+
+.about-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.section-label {
+    margin: 0 0 12px;
+
+    color: #1c2237;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+/* =========================
+   HEADING
+========================= */
 
 .about h1 {
-    text-align: center;
-    padding: 20px 20px 0 20px;
-    font-weight: bold;
-    font-size: 2.5rem;
+    margin: 0 0 25px;
+
     color: #1c2237;
+
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+
+    font-weight: 700;
 }
 
-.list ol {
-    padding: 0 20px;
-    list-style-position: inside;
+/* =========================
+   TEXT
+========================= */
+
+.about-text {
+    max-width: 760px;
+
+    margin: 0 auto 18px;
+
+    color: #555555;
+
+    font-size: 17px;
+    line-height: 1.8;
 }
 
-.list li {
-    margin: 20px 0;
-    font-size: 16px;
-    color: #333;
-}
+/* =========================
+   HIGHLIGHTS
+========================= */
 
-.about-buttons {
+.about-highlights {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+
+    gap: 50px;
+
+    margin-top: 45px;
 }
 
-.about-buttons button {
-    background-color: #fff;
-    margin: 10px;
-    padding: 10px 20px;
+.highlight {
+    min-width: 140px;
+}
+
+.highlight h3 {
+    margin: 0 0 8px;
+
+    color: #1c2237;
+
+    font-size: 28px;
+}
+
+.highlight p {
+    margin: 0;
+
+    color: #555555;
+
+    font-size: 14px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.about-button {
+    margin-top: 40px;
+}
+
+.about-button a {
+    display: inline-block;
+
+    padding: 2px 25px;
+
     border: 2px solid #1c2237;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #1c2237;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+    border-radius: 6px;
 
-.about-buttons button:hover {
     background-color: #1c2237;
-    color: #fff;
-}
+    color: #ffffff;
 
-.service-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  justify-content: center;
-    margin: 10px;
-    flex-direction: column;
-    align-items: center;
-}
+    text-decoration: none;
 
-.service {
-    border: 1px solid #1c2237;
-    padding: 20px;
-    flex: 1;
-    min-width: 600px;
-    max-width: 520px;
-    text-align: left;
-    transition: border 0.3s ease;
-
-    
-}
-
-.service h2 {
-    text-align: center;
-    color: #1c2237;
-    font-size: 20px;
-    font-variant: small-caps;
-    margin-bottom: 10px;
-}
-
-.service p {
     font-size: 15px;
-    margin-bottom: 10px;
-    text-align: center;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
 }
 
-.service:hover {
-    border: 6px solid #1c2237;
+.about-button a:hover {
+    background-color: transparent;
+    color: #1c2237;
+
+    transform: translateY(-2px);
 }
 
-.service ul {
-    padding-left: 0;
-    list-style: none;
-}
-
-.service li {
-    font-size: 18px;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.service li svg {
-    margin-right: 10px;
-}
-
-@media (max-width: 915px) {
-    .service-container {
-        flex-direction: column;
-        align-items: center;
-
-    }
-    
-}
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 768px) {
-    .about h1 {
-        font-size: 2rem;
+
+    .about {
+        padding: 20px 25px;
     }
 
-    .list li {
-        font-size: 1.1rem;
+    .about-text {
+        font-size: 16px;
     }
 
-    .about-buttons button {
-        font-size: 0.9rem;
-    }
-
-    .service h2 {
-        font-size: 1.25rem;
-    }
-
-    .service p {
-        font-size: 1rem;
-    }
-
-    .service-container {
-        gap: 15px;
-        flex-direction: column;
-    }
-
-    .service {
-        max-width: 400px;
+    .about-highlights {
+        gap: 30px;
     }
 }
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 480px) {
-    .about h1 {
-        font-size: 1.5rem;
-    }
-    .list li {
-        font-size: 14px;
+
+    .about {
+        padding: 20px 20px;
     }
 
-    .about-buttons button {
-        font-size: 0.8rem;
-    }
-
-    .service h2 {
-        font-size: 13px;
-    }
-
-    .service p {
+    .section-label {
         font-size: 12px;
+        letter-spacing: 1.5px;
     }
 
-    .service-container {
-        gap: 10px;
-        flex-direction:column ;
+    .about h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
     }
-    .service {
-        min-width: 300px;
-        max-width: 320px;
+
+    .about-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .about-highlights {
+        flex-direction: column;
+        gap: 22px;
+        margin-top: 35px;
+    }
+
+    .highlight h3 {
+        font-size: 24px;
+    }
+
+    .about-button {
+        margin-top: 30px;
+    }
+
+    .about-button a {
+        width: 100%;
+        max-width: 220px;
     }
 }
+

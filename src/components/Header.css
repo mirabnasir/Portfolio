@@ -1,80 +1,883 @@
-* {
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    position: relative;
+
+    background-color: #1c2237;
+    background-image: url("../assets/background.jpg");
+
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+
+    padding: 0 30px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND OVERLAY
+========================================================= */
+
+.header-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(28, 34, 55, 0.98) 0%,
+        rgba(28, 34, 55, 0.88) 38%,
+        rgba(28, 34, 55, 0.45) 65%,
+        rgba(28, 34, 55, 0.15) 100%
+    );
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 25px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 1001;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #7dd3fc;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
     margin: 0;
     padding: 0;
+}
+
+.nav-links a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7dd3fc;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #3d465f;
+    border-radius: 6px;
+
+    background: #242b42;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+}
+
+.menu-btn span {
+    width: 21px;
+    height: 2px;
+
+    background: #ffffff;
+
+    transition: 0.3s ease;
+}
+
+.menu-btn:hover {
+    border-color: #7dd3fc;
+}
+
+.menu-btn:hover span {
+    background: #7dd3fc;
+}
+
+
+/* =========================================================
+   MOBILE SIDEBAR
+========================================================= */
+
+.mobile-sidebar {
+    position: fixed;
+
+    top: 0;
+    right: -280px;
+
+    width: 280px;
+    max-width: 85vw;
+
+    height: 100vh;
+    height: 100svh;
+
+    background: #151a2c;
+
+    z-index: 1002;
+
+    padding: 25px;
+
+    transition: right 0.3s ease;
+
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
+
     box-sizing: border-box;
 }
 
-.header {
-    background-color: #1c2237;
-    color: #fff;
-    padding: 20px 0;
+.mobile-sidebar.open {
+    right: 0;
 }
 
-.header-content {
+
+/* =========================================================
+   SIDEBAR HEADER
+========================================================= */
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #30384f;
+}
+
+.sidebar-header span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.close-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 32px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #7dd3fc;
+}
+
+
+/* =========================================================
+   SIDEBAR LINKS
+========================================================= */
+
+.mobile-sidebar ul {
+    list-style: none;
+
+    margin: 25px 0 0;
+    padding: 0;
+}
+
+.mobile-sidebar li {
+    border-bottom: 1px solid #30384f;
+}
+
+.mobile-sidebar a {
+    display: block;
+
+    padding: 18px 5px;
+
+    color: #d8deea;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+.mobile-sidebar a:hover {
+    color: #7dd3fc;
+
+    padding-left: 10px;
+}
+
+
+/* =========================================================
+   SIDEBAR OVERLAY
+========================================================= */
+
+.sidebar-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
     max-width: 1200px;
+
+    min-height: calc(100vh - 80px);
+    min-height: calc(100svh - 80px);
+
     margin: 0 auto;
-    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+
+    padding-bottom: 40px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    width: 55%;
+    max-width: 650px;
+
+    text-align: left;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
+.hello {
+    color: #7dd3fc;
+
+    font-size: 18px;
+
+    margin: 0 0 12px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 80px);
+
+    margin: 0;
+
+    line-height: 1.1;
+
+    overflow-wrap: break-word;
+}
+
+.hero h2 {
+    font-size: clamp(24px, 4vw, 36px);
+
+    font-weight: 500;
+
+    color: #d8deea;
+
+    margin: 20px 0;
+}
+
+.intro {
     width: 100%;
-    padding-bottom: 20px;
+    max-width: 600px;
+
+    color: #b8c0d0;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin: 0;
 }
 
-.navbar ul li {
-    margin-left: 20px;
-}
 
-.navbar ul li a {
-    color: #fff;
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-btn {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 13px 25px;
+
+    background-color: #7dd3fc;
+
+    color: #111827;
+
     text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: 0.3s ease;
+
+    box-sizing: border-box;
 }
 
-.navbar ul li a:hover {
-    color: #a9b0c3;
+.hero-btn:hover {
+    background-color: #ffffff;
+
+    transform: translateY(-3px);
 }
 
-.intro h1 {
-    font-size: 2em;
-    margin: 10px 0;
+
+/* =========================================================
+   LARGE DESKTOP
+   1200px+
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .header {
+        background-position: right center;
+    }
+
+    .hero-content {
+        width: 55%;
+    }
 }
 
-.intro p {
-    color: #d0d0d0;
-    font-size: 1.1em;
-    margin-top: 10px;
-    line-height: 1.5;
+
+/* =========================================================
+   DESKTOP / LAPTOP
+   992px - 1199px
+========================================================= */
+
+@media (max-width: 1199px) and (min-width: 769px) {
+
+    .header {
+        padding: 0 25px;
+
+        /*
+           Laptop ko right side par maintain karega.
+        */
+        background-position: right center;
+        background-size: cover;
+    }
+
+    .navbar {
+        padding: 22px 0;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 17px;
+    }
+
+    .hero-content {
+        width: 55%;
+        max-width: 580px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 6vw, 70px);
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
 }
+
+
+/* =========================================================
+   TABLET
+   769px - 991px
+========================================================= */
+
+@media (max-width: 991px) and (min-width: 769px) {
+
+    .header {
+        /*
+           Image ko thora left shift kar rahe hain
+           taake laptop visible rahe.
+        */
+        background-position: 75% center;
+    }
+
+    .header-overlay {
+        background: linear-gradient(
+            to right,
+            rgba(28, 34, 55, 0.97) 0%,
+            rgba(28, 34, 55, 0.88) 45%,
+            rgba(28, 34, 55, 0.40) 75%,
+            rgba(28, 34, 55, 0.20) 100%
+        );
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .hero-content {
+        width: 58%;
+    }
+
+    .hero h1 {
+        font-size: clamp(45px, 6vw, 62px);
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+   768px and below
+========================================================= */
 
 @media (max-width: 768px) {
-    .navbar ul {
+
+    .header {
+        padding: 0 20px;
+
+        /*
+           Mobile par image right side se visible rahegi.
+        */
+        background-position: 72% center;
+
+        /*
+           Cover ki jagah thora controlled size.
+        */
+        background-size: cover;
+    }
+
+    .header-overlay {
+        /*
+           Mobile par text center mein hoga,
+           isliye overall dark overlay better hai.
+        */
+        background: rgba(28, 34, 55, 0.78);
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: calc(100vh - 80px);
+        min-height: calc(100svh - 80px);
+
         justify-content: center;
+
+        padding-bottom: 40px;
     }
 
-    .intro h1 {
-        font-size: 1.8em;
+
+    /* HERO CONTENT */
+
+    .hero-content {
+        width: 100%;
+        max-width: 650px;
+
+        align-items: center;
+
+        text-align: center;
     }
 
-    .intro p {
-        font-size: 1em;
+    .hello {
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        font-size: clamp(44px, 9vw, 64px);
+    }
+
+    .hero h2 {
+        font-size: clamp(24px, 5vw, 30px);
+
+        margin: 15px 0;
+    }
+
+    .intro {
+        max-width: 600px;
+
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+    .hero-btn {
+        margin-top: 25px;
     }
 }
+
+
+/* =========================================================
+   MOBILE
+   481px - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 18px;
+
+        /*
+           Laptop right side par rahega.
+        */
+        background-position: 70% center;
+
+        background-size: cover;
+    }
+
+    .header-overlay {
+        background: rgba(28, 34, 55, 0.80);
+    }
+
+    .navbar {
+        padding: 18px 0;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 75px);
+        min-height: calc(100svh - 75px);
+
+        padding-bottom: 25px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hello {
+        font-size: 16px;
+
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 11vw, 58px);
+    }
+
+    .hero h2 {
+        font-size: clamp(23px, 6vw, 28px);
+
+        margin: 13px 0;
+    }
+
+    .intro {
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        max-width: 500px;
+    }
+
+    .hero-btn {
+        width: auto;
+
+        min-width: 180px;
+
+        padding: 12px 22px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   376px - 480px
+========================================================= */
 
 @media (max-width: 480px) {
-    .intro h1 {
-        font-size: 1.5em;
+
+    .header {
+        padding: 0 15px;
+
+        /*
+           Mobile image ko thora zoom-out feel dene ke liye.
+        */
+        background-position: 68% center;
+        background-size: cover;
     }
 
-    .intro p {
-        font-size: 0.9em;
+    .header-overlay {
+        background: rgba(28, 34, 55, 0.82);
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .menu-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 70px);
+        min-height: calc(100svh - 70px);
+
+        padding-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+
+        line-height: 1.05;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+
+        margin: 14px 0;
+    }
+
+    .intro {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .hero-btn {
+        width: 100%;
+
+        max-width: 250px;
+
+        text-align: center;
+    }
+
+    .mobile-sidebar {
+        width: 270px;
     }
 }
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   350px and below
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .header {
+        padding: 0 12px;
+
+        /*
+           Very small screen par image ko thora
+           right side maintain karte hain.
+        */
+        background-position: 65% center;
+        background-size: cover;
+    }
+
+    .header-overlay {
+        background: rgba(28, 34, 55, 0.85);
+    }
+
+    .navbar {
+        padding: 16px 0;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .menu-btn span {
+        width: 19px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 70px);
+        min-height: calc(100svh - 70px);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+
+        margin: 12px 0;
+    }
+
+    .hello {
+        font-size: 15px;
+    }
+
+    .intro {
+        font-size: 14px;
+
+        line-height: 1.55;
+    }
+
+    .hero-btn {
+        max-width: 220px;
+
+        padding: 11px 18px;
+
+        font-size: 15px;
+    }
+
+    .mobile-sidebar {
+        width: 250px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SHORT SCREENS
+   Example: 667px height phones
+========================================================= */
+
+@media (max-height: 700px) and (max-width: 768px) {
+
+    .navbar {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .hero {
+        min-height: calc(100svh - 65px);
+
+        padding-bottom: 15px;
+    }
+
+    .hello {
+        margin-bottom: 6px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 9vw, 52px);
+    }
+
+    .hero h2 {
+        margin: 10px 0;
+
+        font-size: 23px;
+    }
+
+    .intro {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+    .hero-btn {
+        margin-top: 18px;
+
+        padding: 10px 20px;
+    }
+}
+

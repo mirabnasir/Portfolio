@@ -1,183 +1,68 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+import React from "react";
+import "./About.css";
+
+function About() {
+    return (
+        <section className="about">
+
+            <div className="about-content">
+
+                <p className="section-label">ABOUT ME</p>
+
+                <h1>
+                    Building Practical Solutions Through Code
+                </h1>
+
+                <p className="about-text">
+                    I am a Software Engineer with a strong interest in
+                    full-stack web development. I enjoy building responsive,
+                    user-friendly and reliable web applications that solve
+                    real-world problems.
+                </p>
+
+                <p className="about-text">
+                    Through academic and personal projects, I have gained
+                    hands-on experience in developing frontend interfaces,
+                    backend APIs and database-driven applications. I am
+                    continuously improving my skills and exploring better
+                    ways to build clean and maintainable software.
+                </p>
+
+                <div className="about-highlights">
+
+                    <div className="highlight">
+                        <h3>01</h3>
+                        <p>Problem Solving</p>
+                    </div>
+
+                    <div className="highlight">
+                        <h3>02</h3>
+                        <p>Web Development</p>
+                    </div>
+
+                    <div className="highlight">
+                        <h3>03</h3>
+                        <p>Continuous Learning</p>
+                    </div>
+
+                </div>
+
+                <div className="about-button">
+                    <a
+                        href="https://mirabnasir.github.io/cv/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View My CV
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+    );
 }
 
-body {
-    font-family: 'Times New Roman', Times, serif;
-}
+export default About;
 
-.about {
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px;
-}
-
-.about h1 {
-    text-align: center;
-    padding: 20px 20px 0 20px;
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: #1c2237;
-}
-
-.list ol {
-    padding: 0 20px;
-    list-style-position: inside;
-}
-
-.list li {
-    margin: 20px 0;
-    font-size: 18px;
-    color: #333;
-}
-
-.about-buttons {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.about-buttons button {
-    background-color: #fff;
-    margin: 10px;
-    padding: 12px 20px;
-    border: 2px solid #1c2237;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #1c2237;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.about-buttons button:hover {
-    background-color: #1c2237;
-    color: #fff;
-}
-
-.service-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: 10px;
-    flex-direction: column;
-    align-items: center;
-}
-
-.service {
-    border: 1px solid #1c2237;
-    padding: 20px;
-    flex: 1;
-    min-width: 600px;
-    max-width: 520px;
-    text-align: left;
-    transition: border 0.3s ease;
-}
-
-.service h2 {
-    text-align: center;
-    color: #1c2237;
-    font-size: 24px;
-    font-variant: small-caps;
-    margin-bottom: 10px;
-}
-
-.service p {
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.service:hover {
-    border: 6px solid #1c2237;
-}
-
-.service ul {
-    padding-left: 0;
-    list-style: none;
-}
-
-.service li {
-    font-size: 16px;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.service li svg {
-    margin-right: 10px;
-}
-
-/* Responsive Design Fixes */
-@media (max-width: 915px) {
-    .service-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .about h1 {
-        font-size: 2.2rem;
-    }
-
-    .list li {
-        font-size: 1.2rem;
-    }
-
-    .about-buttons button {
-        font-size: 1rem;
-    }
-
-    .service h2 {
-        font-size: 1.4rem;
-    }
-
-    .service p {
-        font-size: 1.1rem;
-    }
-
-    .service-container {
-        gap: 15px;
-        flex-direction: column;
-    }
-
-    .service {
-        max-width: 450px;
-    }
-}
-
-@media (max-width: 480px) {
-    .about h1 {
-        font-size: 1.8rem;
-    }
-
-    .list li {
-        font-size: 16px;
-    }
-
-    .about-buttons button {
-        font-size: 1rem;
-        padding: 12px 18px;
-    }
-
-    .service h2 {
-        font-size: 1.2rem;
-    }
-
-    .service p {
-        font-size: 1rem;
-    }
-
-    .service-container {
-        gap: 10px;
-        flex-direction: column;
-    }
-
-    .service {
-        min-width: 300px;
-        max-width: 320px;
-    }
-}

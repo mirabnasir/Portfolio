@@ -1,0 +1,537 @@
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills {
+    width: 100%;
+    background: #ffffff;
+    padding: 10px 30px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.skills-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-label {
+    margin: 0 0 10px;
+
+    color: #7dd3fc;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.skills-heading h1 {
+    margin: 0 0 15px;
+
+    color: #1c2237;
+
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.skills-heading > p:last-child {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   4 CARD GRID
+========================= */
+
+.skills-container {
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.skill-card {
+    position: relative;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e4e8;
+
+    border-radius: 8px;
+
+    padding: 30px;
+
+    min-height: 275px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================
+   TOP LINE
+========================= */
+
+.skill-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #1c2237;
+
+    transition: width 0.3s ease;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.skill-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #1c2237;
+
+    box-shadow:
+        0 12px 30px rgba(28, 34, 55, 0.10);
+}
+
+.skill-card:hover::before {
+    width: 100%;
+}
+
+
+/* =========================
+   ACTIVE / CLICKED CARD
+========================= */
+
+.skill-card.active {
+    border: 2px solid #1c2237;
+
+    box-shadow:
+        0 12px 30px rgba(28, 34, 55, 0.12);
+}
+
+.skill-card.active::before {
+    width: 100%;
+}
+
+
+/* =========================
+   CARD NUMBER
+========================= */
+
+.card-number {
+    margin-bottom: 8px;
+
+    color: #7dd3fc;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   CARD HEADING
+========================= */
+
+.skill-card h2 {
+    margin: 0 0 14px;
+
+    color: #1c2237;
+
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.card-description {
+    max-width: 450px;
+
+    margin: 0 auto 25px;
+
+    color: #707070;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* =========================
+   SKILL LIST
+========================= */
+
+.skill-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px 25px;
+}
+
+.skill-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-height: 34px;
+
+    color: #333333;
+
+    font-size: 15px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.skill-item:hover {
+    transform: translateX(3px);
+}
+
+.skill-item svg {
+    width: 21px;
+    height: 21px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   ORIGINAL ICON COLORS
+========================= */
+
+.cpp-icon {
+    color: #00599C;
+}
+
+.csharp-icon {
+    color: #239120;
+}
+
+.html-icon {
+    color: #E34F26;
+}
+
+.css-icon {
+    color: #1572B6;
+}
+
+.js-icon {
+    color: #F7DF1E;
+}
+
+.react-icon {
+    color: #61DAFB;
+}
+
+.bootstrap-icon {
+    color: #7952B3;
+}
+
+.tailwind-icon {
+    color: #06B6D4;
+}
+
+.node-icon {
+    color: #83CD29;
+}
+
+.express-icon {
+    color: #000000;
+}
+
+.mongo-icon {
+    color: #47A248;
+}
+
+.mysql-icon {
+    color: #4479A1;
+}
+
+.graphql-icon {
+    color: #E10098;
+}
+.api-icon {
+    color: #1c2237;
+}
+.git-icon {
+    color: #F05032;
+}
+
+.github-icon {
+    color: #181717;
+}
+
+.communication-icon {
+    color: #3498DB;
+}
+
+.team-icon {
+    color: #9B59B6;
+}
+
+.problem-icon {
+    color: #F1C40F;
+}
+
+.time-icon {
+    color: #E67E22;
+}
+
+.writing-icon {
+    color: #E91E63;
+}
+
+
+/* =========================
+   JAVA
+========================= */
+
+.java-icon {
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #5382A1;
+
+    color: #ffffff;
+
+    border-radius: 3px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   OOP
+========================= */
+
+.oop-icon {
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid #1c2237;
+
+    border-radius: 3px;
+
+    color: #1c2237;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================
+   MS OFFICE
+========================= */
+
+.ms-icon {
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #F25022;
+
+    color: #ffffff;
+
+    border-radius: 3px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .skills {
+        padding: 20px 25px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+    }
+
+    .skill-card {
+        min-height: auto;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .skills {
+        padding: 10px 16px;
+    }
+
+    .skills-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-label {
+        font-size: 12px;
+    }
+
+    .skills-heading h1 {
+        font-size: 32px;
+    }
+
+    .skills-heading > p:last-child {
+        font-size: 14px;
+    }
+
+    .skills-container {
+        gap: 18px;
+    }
+
+    .skill-card {
+        padding: 22px;
+
+        border-radius: 7px;
+    }
+
+    .skill-card h2 {
+        font-size: 20px;
+    }
+
+    .card-description {
+        font-size: 13px;
+    }
+
+    .skill-list {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px 10px;
+    }
+
+    .skill-item {
+        font-size: 13px;
+
+        gap: 7px;
+    }
+
+    .skill-item svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .java-icon,
+    .oop-icon,
+    .ms-icon {
+        width: 19px;
+        height: 19px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL
+========================= */
+
+@media (max-width: 350px) {
+
+    .skills {
+        padding: 55px 12px;
+    }
+
+    .skills-heading h1 {
+        font-size: 28px;
+    }
+
+    .skill-card {
+        padding: 18px;
+    }
+
+    .skill-list {
+        grid-template-columns: 1fr;
+    }
+}
+

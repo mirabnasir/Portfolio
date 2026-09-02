@@ -1,0 +1,474 @@
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience {
+    width: 100%;
+    background: #ffffff;
+    padding: 30px 30px 70px;
+}
+
+
+/* =========================
+   EXPERIENCE HEADING
+========================= */
+
+.experience-heading,
+.certifications-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.experience-heading .section-label,
+.certifications-heading .section-label {
+    margin: 0 0 10px;
+
+    color: #7dd3fc;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.experience-heading h1,
+.certifications-heading h1 {
+    margin: 0 0 15px;
+
+    color: #1c2237;
+
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.experience-heading > p:last-child,
+.certifications-heading > p:last-child {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CERTIFICATIONS HEADING
+========================= */
+
+.certifications-heading {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   EXPERIENCE GRID
+========================= */
+
+.experience-container {
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================
+   EXPERIENCE CARD
+========================= */
+
+.experience-card {
+    position: relative;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e4e8;
+
+    border-radius: 8px;
+
+    padding: 28px;
+
+    min-height: 245px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================
+   TOP BORDER EFFECT
+========================= */
+
+.experience-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #1c2237;
+
+    transition: width 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #1c2237;
+
+    box-shadow: 0 12px 30px rgba(28, 34, 55, 0.10);
+}
+
+.experience-card:hover::before {
+    width: 100%;
+}
+
+
+/* =========================
+   CARD TOP
+========================= */
+
+.experience-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   COMPANY LOGO
+========================= */
+
+.company-logo {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+    border-radius: 7px;
+}
+
+
+/* =========================
+   EXPERIENCE INFO
+========================= */
+
+.experience-info {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+/* =========================
+   ROLE
+========================= */
+
+.experience-card h2 {
+    margin: 0 0 6px;
+
+    color: #1c2237;
+
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    line-height: 1.3;
+}
+
+
+/* =========================
+   COMPANY
+========================= */
+
+.company-name {
+    margin-bottom: 6px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.company-name:hover {
+    color: #1c2237;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.experience-date {
+    color: #888;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.experience-description {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CERTIFICATE CARD
+========================= */
+
+.certificate-card {
+    display: flex;
+
+    align-items: center;
+}
+
+.certificate-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+.certificate-label {
+    color: #7dd3fc;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   CERTIFICATE BUTTON
+========================= */
+
+.certificate-link {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 9px 16px;
+
+    border: 1px solid #1c2237;
+    border-radius: 5px;
+background-color: #1c2237 ;
+    color:  #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.certificate-link:hover {
+    color: #1c2237;
+
+    background: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .experience {
+        padding: 10px 25px 60px;
+    }
+
+    .experience-container {
+        max-width: 650px;
+    }
+
+    .experience-card {
+        min-height: auto;
+    }
+
+    .certifications-heading {
+        margin-top: 70px;
+    }
+}
+
+
+/* =========================
+   SMALL SCREENS
+========================= */
+
+@media (max-width: 600px) {
+
+    .experience {
+        padding: 10px 16px 50px;
+    }
+
+    .experience-heading,
+    .certifications-heading {
+        margin-bottom: 40px;
+    }
+
+    .experience-heading h1,
+    .certifications-heading h1 {
+        font-size: 32px;
+    }
+
+    .experience-heading > p:last-child,
+    .certifications-heading > p:last-child {
+        font-size: 14px;
+    }
+
+
+    /* One card per row */
+
+    .experience-container {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .experience-card {
+        padding: 22px;
+
+        border-radius: 7px;
+    }
+
+
+    .experience-card h2 {
+        font-size: 18px;
+    }
+
+
+    .experience-description {
+        font-size: 14px;
+    }
+
+
+    /* Certifications spacing */
+
+    .certifications-heading {
+        margin-top: 65px;
+        margin-bottom: 35px;
+    }
+
+
+    .certificate-card {
+        min-height: auto;
+    }
+
+
+    .certificate-link {
+        margin-top: 15px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL
+========================= */
+
+@media (max-width: 350px) {
+
+    .experience {
+        padding: 10px 12px 40px;
+    }
+
+    .experience-card {
+        padding: 18px;
+    }
+
+    .experience-top {
+        gap: 11px;
+    }
+
+    .company-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .experience-card h2 {
+        font-size: 18px;
+    }
+
+    .experience-description {
+        font-size: 13px;
+    }
+
+    .certifications-heading {
+        margin-top: 50px;
+    }
+
+    .certificate-card {
+        padding: 18px;
+    }
+
+    .certificate-label {
+        font-size: 10px;
+    }
+
+    .certificate-link {
+        font-size: 12px;
+
+        padding: 8px 13px;
+    }
+}
+
