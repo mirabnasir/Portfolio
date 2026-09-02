@@ -1,7 +1,8 @@
 
-/* =========================
-   ABOUT SECTION
-========================= */
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
 
 .about {
     width: 100%;
@@ -35,8 +36,11 @@
 ========================= */
 
 .about h1 {
-    margin: 0 0 25px;
-
+    text-align: center;
+    padding: 20px 20px 0 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 2.5rem;
     color: #1c2237;
 
     font-size: clamp(32px, 5vw, 48px);
@@ -60,9 +64,12 @@
     line-height: 1.8;
 }
 
-/* =========================
-   HIGHLIGHTS
-========================= */
+
+.list li {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #333;
+}
 
 .about-highlights {
     display: flex;
@@ -111,13 +118,42 @@
 
     background-color: #1c2237;
     color: #ffffff;
+}
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+}
 
-    text-decoration: none;
+.service {
+    border: 1px solid #1c2237;
+    padding: 20px;
+    flex: 1;
+    min-width: 600px;
+    max-width: 520px;
+    text-align: left;
+    transition: border 0.3s ease;
 
-    font-size: 15px;
-    font-weight: 600;
+    
+}
 
-    transition: all 0.3s ease;
+.service h2 {
+    text-align: center;
+    color: #1c2237;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-variant: small-caps;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .about-button a:hover {
@@ -127,9 +163,30 @@
     transform: translateY(-2px);
 }
 
-/* =========================
-   TABLET
-========================= */
+.service ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.service li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.service li svg {
+    margin-right: 10px;
+}
+
+@media (max-width: 915px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    
+}
 
 @media (max-width: 768px) {
 
